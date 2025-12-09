@@ -1,0 +1,341 @@
+/* ============================================================
+   Academic Portfolio — Global Theme
+   ============================================================ */
+
+:root {
+    --primary: #2563eb;
+    --accent: #eef2ff;            /* 薄いブルー（学術向け） */
+    --text: #333333;
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --heading-border: #1e40af;    /* 濃いブルー */
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    margin: 0;
+}
+
+/* ============================================================
+   Container / Layout
+   ============================================================ */
+
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ============================================================
+   Header (with background image if set)
+   ============================================================ */
+
+header {
+    background: url("surgery.jpg") center/cover no-repeat;
+    position: relative;
+    text-align: center;
+    padding: 70px 20px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Black overlay for readability */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+header * {
+    position: relative;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.3rem;
+}
+
+.role {
+    color: #cfe0ff;
+    font-weight: bold;
+}
+
+/* ============================================================
+   Headings (Academic style)
+   ============================================================ */
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #111;
+}
+
+h2 {
+    border-left: 6px solid var(--heading-border);
+    padding-left: 12px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin-top: 16px;
+    color: #222;
+}
+
+/* ============================================================
+   Navigation breadcrumb
+   ============================================================ */
+
+.breadcrumb {
+    margin-bottom: 25px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+/* ============================================================
+   Article content box
+   ============================================================ */
+
+.detail-content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.goal-badge {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* ============================================================
+   Paragraph spacing
+   ============================================================ */
+
+p {
+    margin: 16px 0;
+}
+
+/* ============================================================
+   Section divider for challenge sections
+   ============================================================ */
+
+.challenge-section h2 {
+    border-left: 5px solid #2563eb; /* 明るい薄いブルー */
+    padding-left: 12px;
+    margin-left: 0;
+}
+
+
+/* ============================================================
+   Solution / highlight box
+   ============================================================ */
+
+.solution-box {
+    background: #f0fdf4;
+    border: 1px solid #a7f3d0;
+    margin-top: 16px;
+    padding: 20px 24px;
+    border-radius: 12px;
+}
+
+.solution-box h3 {
+    margin-top: 0;
+    color: #046c4e;
+}
+
+/* ============================================================
+   Phase items (SDLC)
+   ============================================================ */
+
+.phase-item {
+    border-left: 4px solid var(--primary);
+    padding-left: 14px;
+    margin-bottom: 22px;
+}
+
+.phase-item h3 {
+    margin: 0 0 6px;
+}
+
+/* ============================================================
+   Table — Academic Style
+   ============================================================ */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.data-table th {
+    background: var(--accent);
+    padding: 14px;
+    border-bottom: 2px solid var(--border);
+    text-align: left;
+    font-weight: 700;
+}
+
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+/* ============================================================
+   Figure / images
+   ============================================================ */
+
+.content-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 24px 0 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ============================================================
+   Cards on index.html
+   ============================================================ */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.nav-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    border-color: var(--primary);
+}
+
+.nav-card .tag {
+    background: var(--accent);
+    color: var(--heading-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    margin-top: 50px;
+}
+
+/* ============================================================
+   Video section (YouTube-style)
+   ============================================================ */
+
+.demo-section {
+    max-width: 880px;
+    margin: 40px auto 20px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 55px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-button::before {
+    content: "";
+    margin-left: 6px;
+    border-left: 22px solid white;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+}
+
+.demo-video-player {
+    width: 100%;
+    display: none;
+    margin-top: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+/* ============================================================
+   Mobile adjustments
+   ============================================================ */
+
+@media (max-width: 600px) {
+    .detail-content {
+        padding: 20px;
+    }
+    header {
+        padding: 40px 15px;
+    }
+}
+
+header,
+header h1,
+header p,
+header .author-name,
+header .role {
+    color: white !important;
+}

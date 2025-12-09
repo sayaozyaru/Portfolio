@@ -1,0 +1,120 @@
+/* ============================================================
+   Profile Landing Page
+   ============================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile picture */
+.profile-photo {
+    width: 160px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+/* Name */
+.name {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Intro text */
+.bio {
+    margin: 10px auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 550px;
+    color: #555;
+}
+
+/* Portfolio card */
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============================================================
+   Portfolio card (full clickable, overlay, white text)
+   ============================================================ */
+
+.portfolio-card {
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 300px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.portfolio-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%); /* 画像を暗くして文字を見やすく */
+}
+
+/* 黒の半透明オーバーレイを追加 */
+.portfolio-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 中央垂直揃え */
+    align-items: center;       /* 中央水平揃え */
+    text-align: center;
+    padding: 0;                /* ズレを生む余白を削除 */
+    background: rgba(0, 0, 0, 0.35);
+    transition: 0.2s;
+}
+
+
+.portfolio-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.portfolio-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.portfolio-card p {
+    margin: 6px 0 0;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}

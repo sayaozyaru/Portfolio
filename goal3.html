@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Goal 3: SDLC | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html">&larr; Back to Overview</a>
+        </nav>
+
+        <article class="detail-content">
+            <span class="goal-badge">Learning Goal 3</span>
+            <h1>Software Development Life Cycle (SDLC)</h1>
+
+            <section>
+                <h2>Artifact: SDLC Analysis</h2>
+                <p>
+                    This artifact describes the Iterative & Incremental SDLC model used in the project and explains how
+                    each phase interacts and depends on the others.
+                </p>
+            </section>
+
+            <section>
+                <h2>Methodology: Iterative and Incremental</h2>
+                <p>
+                    We selected an Iterative & Incremental SDLC due to the medical domain's need for frequent feedback and
+                    rapid validation with clinicians. Iterations allowed small, testable increments that reduced risk.
+                </p>
+
+                <figure>
+                    <img src="sdlc-cycle.png" alt="Iterative SDLC Cycle Diagram" class="content-image" />
+                    <figcaption>Fig 1. Iterative SDLC model used in this project.</figcaption>
+                </figure>
+
+                <p>
+                    Iterative cycles enabled earlier detection of UI and performance issues, and supported continuous
+                    refinement of requirements.
+                </p>
+            </section>
+
+            <section>
+                <h2>SDLC Phases and Dependencies</h2>
+                <p>
+                    The project cycled through planning, analysis & design, implementation, and testing.
+                    Phase dependencies were visible: design decisions affected implementation; testing exposed
+                    unclear requirements and forced planning revisions.
+                </p>
+
+                <div class="phase-list">
+                    <div class="phase-item">
+                        <h3>Planning</h3>
+                        <p>Define scope, essential UI features, and alert specifications.</p>
+                    </div>
+
+                    <div class="phase-item">
+                        <h3>Analysis & Design</h3>
+                        <p>Design GUI layout, data flow, and alert integration details.</p>
+                    </div>
+
+                    <div class="phase-item">
+                        <h3>Implementation</h3>
+                        <p>Implement GUI and integrate alert & data-stream systems.</p>
+                    </div>
+
+                    <div class="phase-item">
+                        <h3>Testing</h3>
+                        <p>Unit-test alert logic, perform integration tests, and validate with user feedback.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Reflection</h2>
+                <p>
+                    The SDLC is a framework for organizing collaboration, quality, and risk management. Iterative development
+                    reduced late defects and improved our ability to manage software's inherent invisibility and unpredictability.
+                </p>
+            </section>
+
+        </article>
+    </div>
+</body>
+</html>

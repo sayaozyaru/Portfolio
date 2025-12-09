@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Goal 2: Challenges | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html">&larr; Back to Overview</a>
+        </nav>
+
+        <article class="detail-content">
+            <span class="goal-badge">Learning Goal 2</span>
+            <h1>Analyzing Key Challenges in SE Project Execution</h1>
+
+            <section>
+                <h2>Artifact: Challenge Analysis</h2>
+                <p>
+                    This artifact analyzes two major challenges encountered during the Brain Tumor Detection
+                    Support Application development: <strong>Scope Creep (Technical Debt)</strong> and
+                    <strong>Inter-team Dependency Failure</strong>. The analysis maps these issues to course concepts
+                    such as the Essence kernel (alphas) and ISO 25010 quality attributes.
+                </p>
+            </section>
+
+            <section class="challenge-section">
+                <h2>Challenge 1: Scope Creep (Technical Debt)</h2>
+                <p>
+                    I expanded the feature set before stabilizing the basic sound alert logic. This premature expansion
+                    caused technical debt—time-consuming fixes and unstable behaviour later in development. This is
+                    indicative of process immaturity (CMMI Level 1 characteristics).
+                </p>
+
+                <div class="solution-box">
+                    <h3>Solution: Definition of Done (DoD)</h3>
+                    <p>
+                        To prevent scope creep, I introduced a Definition of Done (DoD) with acceptance criteria:
+                    </p>
+                    <ul>
+                        <li>Unit tests for alert logic passed</li>
+                        <li>Code follows style and maintainability guidelines</li>
+                        <li>Integration test with live data stream succeeded</li>
+                        <li>ISO 25010 check: UI response time under 100 ms</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="challenge-section">
+                <h2>Challenge 2: Inter-Team Dependency Failure</h2>
+                <p>
+                    During integration, the Data Science team changed the output format without prior coordination.
+                    The GUI could not process the stream, highlighting poor dependency management and weak way-of-working.
+                </p>
+
+                <div class="solution-box">
+                    <h3>Solution: ISO 25010 & TSP Practices</h3>
+                    <p>Actions taken included:</p>
+                    <ul>
+                        <li>Defined explicit quality constraints (ISO 25010): activation rate, latency, reliability</li>
+                        <li>Adopted weekly synchronization (TSP-like Replenishment Meetings)</li>
+                        <li>Documented interface contracts before implementation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Reflection</h2>
+                <p>
+                    The main lesson is that many project failures originate in process and communication gaps rather than purely technical faults.
+                    By applying DoD, ISO 25010, and TSP-aligned practices, we improved predictability and reduced defect propagation.
+                </p>
+            </section>
+        </article>
+    </div>
+</body>
+</html>
