@@ -3,128 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Saya Ichihara</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Profile | Saya Ichihara</title>
+    <link rel="stylesheet" href="style_profile.css">
 </head>
 
 <body>
 
-<header>
-    <div class="container">
-        <div class="title-group">
-            <h1>Brain Tumor Detection Support Application</h1>
+<div class="wrapper">
+
+    <!-- Profile photo -->
+    <img src="face.jpg" alt="Profile Image" class="profile-photo">
+
+    <!-- Name -->
+    <h1 class="name">Saya Ichihara</h1>
+
+    <!-- Short introduction -->
+    <p class="bio">
+        I am a Double Degree Program student between UEF and TUT.<br>I learned about Computer Science. 
+        I am interested in software engineering, autonomous robotics, and image processing.
+
+    <!-- Link to main SE Portfolio -->
+    <a href="portfolio.html" class="portfolio-link">
+        <div class="portfolio-card">
+            <img src="surgery.jpg" alt="Portfolio Thumbnail" class="portfolio-bg">
+            <div class="overlay">
+                <h2>Software Engineering Portfolio</h2>
+                <p>Artifacts from a medical software project</p>
+            </div>
         </div>
-        <p class="role">Software Engineering Portfolio</p>
-    </div>
-</header>
-
-<main class="container">
-    <nav class="breadcrumb">
-        <a href="profile.html">&larr; Back to Profile</a>
-    </nav>
-
-    <!-- Portfolio Overview -->
-    <section id="overview">
-        <h2>About This Portfolio</h2>
-        <p>
-            This portfolio is based on a real software engineering project conducted using Marginum’s
-            brain tumor detection device. The detector outputs only a numerical value representing tumor
-            concentration. Using this raw data, we performed data-science-driven analysis to identify When a tumor signal is detected, Which tumor class is activated</li>
+    </a>
 
 
-            Based on this analysis, we implemented a real-time detection sound system and designed a GUI
-            that provides immediate feedback to clinicians. The project incorporated SDLC principles,
-            quality standards, and process methods learned throughout the course, making it a practical
-            demonstration of applying software engineering discipline to a medical-support system.
-        </p>
-
-    </section>
-
-    <!-- Artifacts Navigation -->
-    <section>
-        <h2>Artifacts</h2>
-
-        <div class="card-grid">
-
-            <!-- Goal 1 -->
-            <a href="goal1.html" class="nav-card">
-                <span class="tag">Learning Goal 1</span>
-                <h3>SE as a Disciplined Field</h3>
-                <p>Comparison of Software Engineering and Computer Science from a theoretical viewpoint.</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-            <!-- Goal 2 -->
-            <a href="goal2.html" class="nav-card">
-                <span class="tag">Learning Goal 2</span>
-                <h3>Challenges in SE Projects</h3>
-                <p>Analysis of Scope Creep, inter-team dependency issues, and process failures.</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-            <!-- Goal 3 -->
-            <a href="goal3.html" class="nav-card">
-                <span class="tag">Learning Goal 3</span>
-                <h3>Software Development Life Cycle</h3>
-                <p>Iterative & Incremental Model with phase breakdown and dependency mapping.</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-            <!-- Goal 4 -->
-            <a href="goal4.html" class="nav-card">
-                <span class="tag">Learning Goal 4</span>
-                <h3>Methodologies & Quality Standards</h3>
-                <p>Waterfall, Agile, Spiral comparison & ISO 25010 / DoD quality framework.</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-            <!-- Goal 5 -->
-            <a href="goal5.html" class="nav-card">
-                <span class="tag">Learning Goal 5</span>
-                <h3>Personal & Organizational Process</h3>
-                <p>PSP Lite, estimation analysis, and maturity model reflection.</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-            <a href="references.html" class="nav-card">
-                <h3>References</h3>
-                <p>List of materials supporting the portfolio</p>
-                <span class="arrow">View Details →</span>
-            </a>
-
-
-        </div>
-    </section>
-
-</main>
-
-<!-- Demo Video Section -->
-<section id="demo-video" class="demo-section">
-    <h2>Demo Video</h2>
-
-    <div class="video-wrapper" onclick="playDemoVideo()">
-        <img src="thumbnail.png" alt="Demo Video Thumbnail" class="video-thumbnail">
-        <div class="play-button"></div>
-    </div>
-
-    <video id="demoVideoPlayer" class="demo-video-player" controls>
-        <source src="demo.mp4" type="video/mp4">
-    </video>
-</section>
-
-<footer>
-    <p>&copy; 2025 Saya Ichihara</p>
-</footer>
-
-<script>
-function playDemoVideo() {
-    const thumb = document.querySelector('.video-wrapper');
-    const video = document.getElementById('demoVideoPlayer');
-    thumb.style.display = "none";
-    video.style.display = "block";
-    video.play();
-}
-</script>
+</div>
 
 </body>
 </html>
